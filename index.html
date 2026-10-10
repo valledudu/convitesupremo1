@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Churras de Pai e Filho</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="travado">
+
+<canvas id="brasas"></canvas>
+
+<!-- ABERTURA -->
+<div id="abertura">
+  <div class="porta porta-esq"></div>
+  <div class="porta porta-dir"></div>
+  <div class="selo">
+    <div class="chama">🔥</div>
+    <p class="pre">Você recebeu um convite</p>
+    <h1 class="titulo-abertura">Churras<br>de Pai &amp; Filho</h1>
+    <button id="abrirBtn" type="button">Abrir convite</button>
+  </div>
+</div>
+
+<main class="convite">
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="pre rev"></p>
+    <h1 class="hero-titulo" aria-label="Churras de Pai e Filho">
+      <span>Churras</span><span class="de">de</span><span class="grad">Pai &amp; Filho</span>
+    </h1>
+    <p class="hero-texto rev">Carne na brasa e uma tarde para guardar na memória.</p>
+    <div class="contagem rev" id="contagem">
+      <div><b id="cd-dias">--</b><small>dias</small></div>
+      <div><b id="cd-horas">--</b><small>horas</small></div>
+      <div><b id="cd-min">--</b><small>min</small></div>
+      <div><b id="cd-seg">--</b><small>seg</small></div>
+    </div>
+    <a href="#confirmar" class="cta rev">Confirmar presença</a>
+  </section>
+
+  <!-- CARROSSEL -->
+  <section class="rev">
+    <div class="carrossel" id="carrossel">
+      <div class="slides">
+        <div class="slide ativo"><img src="foto1.jpg" alt="foto"></div>
+        <div class="slide"><img src="foto2.jpg" alt="" style="object-position:center 20%"></div>
+        <div class="slide"><img src="foto3.jpg" alt="" style="object-position:center 25%"></div>
+        <div class="slide"><img src="foto4.jpg" alt="" style="object-position:center 68%"></div>
+      </div>
+      <button class="seta seta-esq" type="button" aria-label="Anterior">‹</button>
+      <button class="seta seta-dir" type="button" aria-label="Próxima">›</button>
+      <div class="pontos"></div>
+      <div class="barra"><i></i></div>
+    </div>
+  </section>
+
+  <!-- INFO -->
+  <section class="grade">
+    <div class="vidro rev"><span class="ico">📅</span><h3>Data</h3><p>Sábado, 31 de Outubro</p></div>
+    <div class="vidro rev"><span class="ico">⏰</span><h3>Horário</h3><p>11:00<br><small></small></p></div>
+    <div class="vidro rev largo">
+      <span class="ico">📍</span><h3>Local</h3>
+      <p>QR 121 CONJUNTO B CASA 21</p>
+      <a href="https://maps.app.goo.gl/UnHkL5NJCW6MUkSL8" target="_blank" rel="noopener" class="botao-maps">Ver no mapa</a>
+    </div>
+  </section>
+
+  <!-- CARDÁPIO -->
+<!--<section>
+    <h2 class="rev">O que vai rolar na brasa</h2>
+    <div class="grade menu">
+      <div class="vidro rev"><span class="ico">🥩</span><p>Picanha e maminha</p></div>
+      <div class="vidro rev"><span class="ico">🌭</span><p>Linguiça e frango</p></div>
+      <div class="vidro rev"><span class="ico">🧄</span><p>Pão de alho</p></div>
+      <div class="vidro rev"><span class="ico">🍚</span><p>Arroz, farofa e vinagrete</p></div>
+      <div class="vidro rev"><span class="ico">🥤</span><p>Refri e suco pra molecada</p></div>
+      <div class="vidro rev"><span class="ico">🍨</span><p>Sobremesa gelada</p></div>
+    </div>
+  </section>  -->
+
+  <!-- PROGRAMAÇÃO -->
+  <!--<section>
+    <h2 class="rev">Programação</h2>
+    <ol class="linha">
+      <li class="rev"><b>13:00</b><span>Chegada e boas-vindas</span></li>
+      <li class="rev"><b>14:00</b><span>Churrasco liberado</span></li>
+      <li class="rev"><b>15:30</b><span>Jogo: pais contra filhos ⚽</span></li>
+      <li class="rev"><b>17:00</b><span>Sobremesa e foto da turma</span></li>
+    </ol>
+  </section>-->
+
+  <!-- LEVAR -->
+  <section class="vidro rev levar">
+    <h2>O que levar</h2>
+    <p>🍻 Sua bebida</p>
+  </section>
+
+  <p class="observacao rev">⚠️ Observação: convidado não convida.</p> 
+
+  <!-- CONFIRMAR -->
+  <section id="confirmar" class="vidro rev form">
+    <h2>Bota seu nome na lista</h2>
+    <input type="text" id="nome" placeholder="Seu nome" autocomplete="name">
+    <input type="text" id="filho" placeholder="Nome do filho / pai">
+    <input type="number" id="qtd" min="1" max="10" value="2" aria-label="Quantas pessoas">
+    <a id="enviarBtn" class="cta" href="https://wa.me/556184321171" target="_blank" rel="noopener">Confirmar no WhatsApp</a>
+  </section>
+
+  <footer>Te esperamos na brasa 🔥</footer>
+</main>
+
+<div id="baloes-container"></div>
+<canvas id="confete"></canvas>
+<script src="script.js"></script>
+</body>
+</html>
